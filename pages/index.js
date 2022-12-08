@@ -8,16 +8,19 @@ const Home = ({data}) => {
 
   return ( 
     <>
-    <MyImage/>
-    <div>
-    {data.map((navs, index) => {
-      return(
-           <nav>
-              <a href ={navs.url}> {navs.label}</a>
-               </nav>
+    <header className='header'>   
+      <MyImage/>
+      <div>
+      {data.map((navs, index) => {
+        return(
             
-          )})}
-    </div>
+                <a href ={navs.url}> {navs.label}</a>
+                
+              
+            )})}
+        <a href="https://octet.design/contact-us/" class="header-link">Contact Us <sup class="dot-green"></sup></a>
+      </div>
+    </header>
     </>
    );
 }
