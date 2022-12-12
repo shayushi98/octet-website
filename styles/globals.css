@@ -1225,3 +1225,6 @@ sup.dot-green {
   top: -1.1em;
   right: -5px;
 }
+.d-flex{
+  display: flex;
+}
