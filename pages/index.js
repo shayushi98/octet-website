@@ -69,15 +69,19 @@ export function getMore(navs) {
               {
                 navs.childItems.nodes.map((data, index) => {
                   return(
+                    <>
+                    <h4><a href="data.uri">{data.label}</a></h4>
+                    <div>
+                  {    
                   data.childItems.nodes.map((ele, index) => {
                     return (
                       <>
                       <div>
-                        <h4><a href="data.uri">{data.label}</a></h4>
-                        {data.label}
+                        {/* <h4><a href="data.uri">{data.label}</a></h4> */}
+                       
                         <ul className="list-dash">
                           <li>
-                            {ele.label}
+                        
                             <a href="ele.uri">{ele.label}</a>
                           </li>
                         </ul>
@@ -85,9 +89,13 @@ export function getMore(navs) {
                     </>
                     )
                   })
+                }
+                </div>
+                  </>
+                 
                   )
+                 
                 })
-  
               }
             </div>
             <div className='right'>
