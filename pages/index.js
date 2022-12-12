@@ -74,10 +74,8 @@ export function getMore(navs) {
                       <>
                       <div>
                         <h4><a href="data.uri">{data.label}</a></h4>
-                        {data.label}
                         <ul className="list-dash">
                           <li>
-                            {ele.label}
                             <a href="ele.uri">{ele.label}</a>
                           </li>
                         </ul>
