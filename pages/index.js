@@ -26,7 +26,7 @@ const Home = ({data}) => {
 )
 
         }})}
-        <a href="https://octet.design/contact-us/" class="header-link">Contact Us <sup class="dot-green"></sup></a>
+       <a href="https://octet.design/contact-us/" class="header-link">Contact Us <sup class="dot-green"></sup></a>
      
       </div>
  
@@ -48,11 +48,26 @@ export function getMore(navs){
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      {navs.childItems.nodes.map((data, index) => {
-   return (<a href ={data.uri}> {data.label}</a>)
+      { navs.childItems.nodes.map((data, index) => {
+        console.log(data);
+        data.childItems.nodes.map((ele,index) => {
+          console.log(ele);
+   return (
+    <div>
+   <a href ={data.uri}> {data.label}</a>
+   <a href = {ele.uri}> {ele.label} </a>
+   </div>
+   )
+        })
+   
       })}
+    
+
+      
+
      
     </div>
+
   </div> 
     // <a href ={navs.uri}> {navs.label}</a>
   )
